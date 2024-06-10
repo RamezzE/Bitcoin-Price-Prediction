@@ -23,8 +23,8 @@ if __name__ == '__main__':
     with open('config.yaml', 'r') as f:
         paths = yaml.safe_load(f)
         
-    df = pd.read_csv(paths['case-study-1']['raw-data'])
+    df = pd.read_csv(paths['case_study_1']['raw_data'])
 
     df_cleaned = clean_data(df)
 
-    df_cleaned.to_csv(paths['case-study-1']['cleaned-data'], index=False)
+    df_cleaned.to_csv(paths['case_study_1']['cleaned_data'], index=False)

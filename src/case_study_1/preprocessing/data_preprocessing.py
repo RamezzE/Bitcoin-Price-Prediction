@@ -115,9 +115,9 @@ if __name__ == '__main__':
     with open('config.yaml', 'r') as file:
         paths = yaml.safe_load(file)
     
-    df = pd.read_csv(paths['case-study-1']['cleaned-data'])
+    df = pd.read_csv(paths['case_study_1']['cleaned_data'])
     
     train, test = preprocess_data(df)    
     
-    train.to_csv(paths['case-study-1']['processed-train-data'], index=False)
-    test.to_csv(paths['case-study-1']['processed-test-data'], index=False)
+    train.to_csv(paths['case_study_1']['processed-train-data'], index=False)
+    test.to_csv(paths['case_study_1']['processed-test-data'], index=False)

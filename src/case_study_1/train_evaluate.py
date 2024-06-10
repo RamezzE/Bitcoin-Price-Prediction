@@ -28,7 +28,7 @@ if __name__ == '__main__':
     with open('config.yaml', 'r') as f:
         paths = yaml.safe_load(f)
         
-    df = pd.read_csv(paths['case-study-1']['raw-data'])
+    df = pd.read_csv(paths['case_study_1']['raw_data'])
     
     df_cleaned = clean_data(df)
     
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     evaluate_model('Prophet', test['Date'], y_test, y_pred, plot = False)
     
     # Plot all results
-    plot_all_results(['Random Forest', 'SVR', 'XGBoost', 'ARIMA', 'Prophet'], test['Date'], y_test, y_preds, 'Model Comparison (Train & Test Split)', paths['case-study-1']['graphs']['results']['train-test-split'])
+    plot_all_results(['Random Forest', 'SVR', 'XGBoost', 'ARIMA', 'Prophet'], test['Date'], y_test, y_preds, 'Model Comparison (Train & Test Split)', paths['case_study_1']['graphs']['results']['train_test_split'])
     
     # ################ 2 - Cross Validation   #####################
     
@@ -126,4 +126,4 @@ if __name__ == '__main__':
     evaluate_model("Prophet", test['Date'], y_test, y_pred, plot = False)
     print()
     
-    plot_all_results(['Random Forest', 'SVR', 'XGBoost', 'ARIMA', 'Prophet'], test['Date'], y_test, y_preds, 'Model Comparison (Walk Forward Validation)', paths['case-study-1']['graphs']['results']['walk-forward-val'])
+    plot_all_results(['Random Forest', 'SVR', 'XGBoost', 'ARIMA', 'Prophet'], test['Date'], y_test, y_preds, 'Model Comparison (Walk Forward Validation)', paths['case_study_1']['graphs']['results']['walk_forward_val'])

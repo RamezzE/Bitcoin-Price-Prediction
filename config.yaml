@@ -1,16 +1,11 @@
-case-study-1:
-  raw-data: "data/case-study-1/raw/bitcoin_price_13_17.csv"
-  cleaned-data: "data/case-study-1/processed/cleaned_bitcoin_price_13_17.csv"
-  preprocessed-data: "data/case-study-1/processed/preprocessed_bitcoin_price_13_17.csv"
-  processed-train-data: "data/case-study-1/processed/processed_train.csv"
-  processed-test-data: "data/case-study-1/processed/processed_test.csv"
+case_study_1:
+  raw_data: "data/case_study_1/raw/bitcoin_price_13_17.csv"
+  cleaned_data: "data/case_study_1/processed/cleaned_bitcoin_price_13_17.csv"
+  preprocessed_data: "data/case_study_1/processed/preprocessed_bitcoin_price_13_17.csv"
+  processed_train_data: "data/case_study_1/processed/processed_train.csv"
+  processed_test_data: "data/case_study_1/processed/processed_test.csv"
 
   graphs:
     results:
-      train-test-split: "graphs/case-study-1/results/train-test-split.png"
-      walk-forward-val: "graphs/case-study-1/results/walk-forward-val.png"
-
-case-study-2:
-  raw-data: "data/case-study-2/raw/ac.csv"
-  cleaned-data: "data/case-study-2/processed/cleaned_bitcoin_price_2.csv"
-  preprocessed-data: "data/case-study-2/processed/preprocessed_bitcoin_price_2.csv"
+      train_test_split: "graphs/case_study_1/results/train_test_split.png"
+      walk_forward_val: "graphs/case_study_1/results/walk_forward_val.png"
