@@ -64,13 +64,65 @@ The performance of each model is evaluated using multiple metrics and recorded a
 
 #### Train, Test Split
 
-| Model         | R²     | MAPE   | MAE      | MSE        |
-|---------------|--------|--------|----------|------------|
-| Prophet       | 0.368  | 18.449 | 413.669  | 273712.588 |
-| XGBoost       | -2.975 | 72.076 | 1278.652 | 1722022.791| 
-| Random Forest | -2.990 | 72.251 | 1281.341 | 1728594.680| 
-| SVR           | -3.020 | 72.415 | 1285.417 | 1741651.876|
-| ARIMA         | -3.761 | 78.558 | 1397.157 | 2062608.181|
+<table>
+  <tr>
+    <td>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>R²</th>
+            <th>MAPE</th>
+            <th>MAE</th>
+            <th>MSE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Prophet</td>
+            <td>0.368</td>
+            <td>18.449</td>
+            <td>413.669</td>
+            <td>273712.588</td>
+          </tr>
+          <tr>
+            <td>XGBoost</td>
+            <td>-2.975</td>
+            <td>72.076</td>
+            <td>1278.652</td>
+            <td>1722022.791</td>
+          </tr>
+          <tr>
+            <td>Random Forest</td>
+            <td>-2.990</td>
+            <td>72.251</td>
+            <td>1281.341</td>
+            <td>1728594.680</td>
+          </tr>
+          <tr>
+            <td>SVR</td>
+            <td>-3.020</td>
+            <td>72.415</td>
+            <td>1285.417</td>
+            <td>1741651.876</td>
+          </tr>
+          <tr>
+            <td>ARIMA</td>
+            <td>-3.761</td>
+            <td>78.558</td>
+            <td>1397.157</td>
+            <td>2062608.181</td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+    <td>
+      <img src="graphs/case_study_1/results/train_test_split.png" alt="Bitcoin Price Prediction" height="200">
+    </td>
+  </tr>
+</table>
+
+
 
 ### Time Series Cross Validation
 
@@ -84,13 +136,63 @@ The performance of each model is evaluated using multiple metrics and recorded a
 
 ### Walk Forward Validation
 
-| Model         | R²     | MAPE   | MAE      | MSE        |
-|---------------|--------|--------|----------|------------|
-| ARIMA         | 0.979  | 0.033  | 64.540   | 9058.215   |
-| Prophet       | 0.977  | 0.041  | 76.843   | 10018.735  |
-| Random Forest | 0.510  | 0.221  | 343.099  | 212202.610 |
-| XGBoost       | 0.281  | 0.248  | 374.083  | 311696.006 |
-| SVR           | -2.937 | 0.719  | 1273.542 | 1705706.596|
+<table>
+  <tr>
+    <td>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>R²</th>
+            <th>MAPE</th>
+            <th>MAE</th>
+            <th>MSE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ARIMA</td>
+            <td>0.979</td>
+            <td>0.033</td>
+            <td>64.540</td>
+            <td>9058.215</td>
+          </tr>
+          <tr>
+            <td>Prophet</td>
+            <td>0.977</td>
+            <td>0.041</td>
+            <td>76.843</td>
+            <td>10018.735</td>
+          </tr>
+          <tr>
+            <td>Random Forest</td>
+            <td>0.510</td>
+            <td>0.221</td>
+            <td>343.099</td>
+            <td>212202.610</td>
+          </tr>
+          <tr>
+            <td>XGBoost</td>
+            <td>0.281</td>
+            <td>0.248</td>
+            <td>374.083</td>
+            <td>311696.006</td>
+          </tr>
+          <tr>
+            <td>SVR</td>
+            <td>-2.937</td>
+            <td>0.719</td>
+            <td>1273.542</td>
+            <td>1705706.596</td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+    <td>
+      <img src="graphs/case_study_1/results/walk_forward_val.png" alt="Bitcoin Price Prediction" height="200">
+    </td>
+  </tr>
+</table>
 
 
 ## Building
@@ -120,7 +222,7 @@ Before building the project, ensure you have Python installed
 
     `pip install -r requirements.txt`
 
-5. **Run main file to train models and view results**
+5. **Run main file to clean & preprocess data then train models and view results**
 
     `python src\case_study_1\train_evaluate.py`
 
